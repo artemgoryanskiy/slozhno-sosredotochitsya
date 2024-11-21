@@ -40,3 +40,18 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+button {
+  text-transform: lowercase;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+button:focus, button:focus-visible {
+  outline: none;
+}
+
+
+
+

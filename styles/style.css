@@ -1,5 +1,117 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  padding: 20px;
+  font-family: var(--main-font-family, sans-serif);
+  font-size: var(--main-font-size, 18px);
+  line-height: var(--main-line-height);
+  color: var(--main-text-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr auto-fit 1fr;
+  position: relative;
+}
+
+.header__theme-menu {
+  margin-bottom: 274px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  justify-self: center;
+  align-self: start;
+}
+
+.header__theme-menu-button {
+  inline-size: 70px;
+  block-size: 23px;
+  padding: 1.5px 13px;
+  color: var(--accent-color);
+  line-height: 18px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color-transparent);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  block-size: 26px;
+  outline: 1px solid var(--accent-color);
+  outline-offset: -1px;
+  padding: 0 13px;
+  pointer-events: none;
+}
+
+.header__title {
+  position: relative;
+  left: -20px;
+  font-size: var(--header-title-size-desktop);
+  font-weight: bold;
+  line-height: 82.5%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__quote {
+  inline-size: 50%;
+  margin: 115px 0;
+  justify-self: end;
+  color: var(--subtitle-color);
+  font-weight: bold;
+}
+
+.title-decor {
+  background: var(--accent-color);
+}
+
+.decor-element {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 1px;
+  right: 9px;
+  color: var(--accent-color);
+}
+
+.decor-element::after {
+  content: "";
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  margin-inline-start: 10px;
+  background: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  right: 0;
+  top: 0;
+  border: solid var(--accent-color);
+  border-width: 1px 1px 0px 0px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  left: 0;
+  bottom: 0;
+  border: solid var(--accent-color);
+  border-width: 0px 0px 1px 1px;
+}
+
+
