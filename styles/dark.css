@@ -5,8 +5,37 @@
 */
 
 .page.theme_dark {
+  background: url(../images/cover-image-dark.png) no-repeat center / cover;
+
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: rgb(255, 0, 112);
+  /* Цвет элементов меню */
+  --menu-item-color: var(--accent-color);
+  /* Цвет поупрозрачного заголовка в текстовой секции */
+  --accent-color-transparent: rgba(255, 0, 112, 0.4);
+  /* Цвет основного текста */
+  --main-text-color: rgb(241, 178, 206);
+  /* Цвет заголовков-параграфов и цитаты */
+  --subtitle-color: rgb(0, 0, 40);
+  /* Цвет главного заголовка */
+  --title-color: rgb(219, 0, 255);
+  --section-title-color: var(--accent-color);
+  --link-action-color: var(--accent-color);
+
+  .decor-element {
+    display: flex;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: url(../images/cover-image-dark.png) no-repeat center / cover;
+  }
+  .decor-element {
+    display: flex;
+  }
 }
