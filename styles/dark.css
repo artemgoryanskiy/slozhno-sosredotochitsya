@@ -22,14 +22,15 @@
   --subtitle-color: rgb(0, 0, 40);
   /* Цвет главного заголовка */
   --title-color: rgb(219, 0, 255);
+  /* Цвет заголовков екции с текстом */
   --section-title-color: var(--accent-color);
+  /* Цвет состояний ссылок */
   --link-action-color: var(--accent-color);
 
   .decor-element {
     display: flex;
   }
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {

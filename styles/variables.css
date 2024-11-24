@@ -8,18 +8,21 @@
   --main-font-size: 18px;
   --main-line-height: 23px;
   --header-title-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-/* Настройки цвета */
-/* Цыет заголовков и меню */
+  /* Настройки цвета */
+  /* Цыет заголовков и меню */
   --accent-color: rgb(255, 0, 112);
+  /* Цвет элементов меню */
   --menu-item-color: var(--accent-color);
   /* Цвет поупрозрачного заголовка в текстовой секции */
-  --accent-color-transparent: rgba(255, 0, 112, .4);
+  --accent-color-transparent: rgba(255, 0, 112, 0.4);
   /* Цвет основного текста */
   --main-text-color: rgb(241, 178, 206);
   /* Цвет заголовков-параграфов и цитаты */
   --subtitle-color: rgb(0, 0, 40);
   /* Цвет главного заголовка */
   --title-color: rgb(219, 0, 255);
+  /* Цвет заголовков екции с текстом */
   --section-title-color: var(--accent-color);
+  /* Цвет состояний ссылок */
   --link-action-color: var(--accent-color);
 }

@@ -14,12 +14,10 @@
     --subtitle-color: var(--main-text-color);
     --link-action-color: var(--main-text-color);
     background: url(../images/cover-image-light.png) no-repeat center / cover;
-    
+    .decor-element {
+      display: none;
+    }
   }
-  .decor-element {
-    display: none;
-  }
-
 }
 
 .page.theme_light {
@@ -28,7 +26,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   background: url(../images/cover-image-light.png) no-repeat center / cover;
-  
+
   --accent-color: rgb(255, 141, 203);
   --main-text-color: rgb(53, 52, 48);
   --menu-item-color: var(--main-text-color);
