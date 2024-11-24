@@ -13,19 +13,20 @@
 .header {
   position: relative;
   display: grid;
+  block-size: 95vh;
+  inline-size: 98vw;
   grid-template-rows: 1fr auto 1fr;
-  margin-block-end: 80px;
+  margin-block-end: 78px;
 }
 /* Стилизация меню */
-.header__theme-menu {
+/* .header__theme-menu {
   padding-block-end: 274px;
-}
+} */
 
 .header__theme-menu-list {
   display: flex;
   justify-content: center;
   gap: 10px;
-  align-self: start;
 }
 
 .header__theme-menu-button {
@@ -66,8 +67,8 @@
 /* Стилизация цитаты в хэдэре */
 .header__quote {
   justify-self: end;
-  margin: 115px 0;
-  inline-size: 48vw;
+  align-content: center;
+  inline-size: 49vw;
 }
 
 .title-decor {
@@ -79,7 +80,7 @@
 .decor-element {
   position: absolute;
   top: 1px;
-  right: 9px;
+  right: 13px;
   display: flex;
   align-items: center;
   color: var(--accent-color);
@@ -100,7 +101,7 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: 4px;
   border: solid var(--accent-color);
   border-width: 1px 1px 0px 0px;
   inline-size: 25px;
@@ -117,14 +118,19 @@
   inline-size: 25px;
   block-size: 25px;
 }
+
+main {
+  inline-size: 98vw;
+}
+
 /* Стилизация секций с текстом */
 /* Разметка сеток */
-.content-section {
+/* .content-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
   margin-block-end: 76px;
-}
+} */
 /* Стилизация заголовков */
 .section-title {
   color: var(--section-title-color);
@@ -136,20 +142,33 @@
 }
 /* Размещение ячеек */
 
+.first-section, .third-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px 10px;
+}
+
 .first-section {
   margin-block-end: 83px;
 }
-.first-section__article,
-.third-section__article {
-  grid-column: 2 / span 2;
+
+.first-section__article, .third-section__article {
+  grid-column: 2;
 }
 
 .second-section {
-  margin-block-end: 84px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+  margin-block-end: 86px;
 }
 
 .second-section__article {
   grid-row: 2;
+}
+
+.third-section {
+  margin-block-end: 80px;
 }
 
 .third-section__article .section-article__title {
@@ -173,8 +192,10 @@
 }
 /* Сетка галереи */
 .gallery-section {
-  gap: 19px 20px;
-  margin-block-end: 83px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+  margin-block-end: 72px;
 }
 
 .gallery-title {
@@ -208,14 +229,12 @@
 }
 /* Стилизация футера */
 .footer {
+  block-size: 95vh;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-}
-
-.header-footer {
-  padding-block: 299px;
 }
 
 @media (width <= 768px) {
@@ -241,17 +260,11 @@
 
   .first-section {
     gap: 25px 40px;
-  }
-
-  .first-section {
     margin-block-end: 87px;
   }
 
   .second-section {
     gap: 23px;
-  }
-
-  .second-section {
     margin-block-end: 83px;
   }
 
@@ -383,3 +396,6 @@
     padding-block: 275px;
   }
 }
+
+
+

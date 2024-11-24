@@ -4,12 +4,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  padding: 0;
 }
 
 h1,
@@ -55,4 +57,9 @@ button:focus-visible {
 
 a {
   text-decoration: none;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
 }
