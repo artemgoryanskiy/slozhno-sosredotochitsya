@@ -13,8 +13,7 @@
 .header {
   position: relative;
   display: grid;
-  min-block-size: 100vh;
-  inline-size: 96vw;
+  height: 100vh;
   grid-template-rows: 299px 130px 299px;
   margin-block-end: 40px;
 }
@@ -34,12 +33,12 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--menu-item-color);
+  outline: 1px solid var(--menu-item-hover-dark);
   outline-offset: -1px;
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--menu-item-color);
+  border-block-end: 1px var(--menu-item-color) solid;
 }
 
 .header__theme-menu-button_active {
@@ -67,16 +66,11 @@
   inline-size: 48vw;
 }
 
-.title-decor {
-  color: var(--subtitle-color);
-  font-weight: bold;
-  background: var(--accent-color);
-}
 /* Декоративня надпись */
 .decor-element {
   position: absolute;
   top: 1px;
-  right: 7px;
+  right: 9px;
   display: flex;
   align-items: center;
   color: var(--accent-color);
@@ -107,7 +101,7 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   left: 0;
   border: solid var(--accent-color);
   border-width: 0px 0px 1px 1px;
@@ -115,10 +109,7 @@
   block-size: 25px;
 }
 
-main {
-  inline-size: 96vw;
-}
-/* Стилизация заголовков */
+/* 
 .section-title {
   color: var(--section-title-color);
   font-size: var(--main-font-size);
@@ -127,7 +118,7 @@ main {
 .section-article__title {
   margin-block-end: 11px;
 }
-/* Размещение ячеек */
+
 .first-section,
 .third-section {
   display: grid;
@@ -137,9 +128,9 @@ main {
 
 .first-section {
   margin-block-end: 84px;
-}
+} */
 
-.first-section__article,
+/* .first-section__article,
 .third-section__article {
   grid-column: 2;
 }
@@ -166,29 +157,62 @@ main {
 .section-article__subtitle {
   margin-block-end: 10px;
   font-weight: normal;
-}
+} */
 /* Стилизация ссылок в тексте */
-.section-article__link {
+
+.content-section {
+  display: grid;
+  gap: 22px 20px;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  margin-block-end: 87px;
+}
+
+.content-section__title {
+  color: var(--section-title-color);
+  font-size: var(--main-font-size);
+}
+
+.main-article__title {
+  font-weight: bold;
+  margin-block-end: 10px;
+  font-weight: bold;
+  font-size: inherit;
+}
+
+.main-article__subtitle {
+  font-weight: normal;
+  margin-block-end: 10px;
+
+}
+
+.main-article__link {
   text-shadow: 1px 1px 0 var(--accent-color);
 }
 
-.section-article__link:focus-visible {
+.main-article__link:focus-visible {
   outline: 1px inset var(--link-action-color);
 }
-.section-article__link:hover {
+
+.main-article__link:hover {
   border-block-end: 1px solid var(--main-text-color);
 }
-/* Сетка галереи */
-.gallery-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 19px 21px;
-  margin-block-end: 61px;
+
+.two-column .main-article {
+  grid-column: 2 / 4;
 }
 
+.three-column .main-article {
+  grid-row: 2;
+}
+
+.additional-header {
+  margin-block-end: 20px;
+}
+/* Сетка галереи */
+
 .gallery-title {
-  grid-column: 1 / span 3;
-  margin-block-end: 4px;
+  grid-column: 1/4;
 }
 
 .sunset-image {
@@ -196,28 +220,28 @@ main {
 }
 
 .icecream-image {
+  grid-row: 2/4;
   grid-column: 3;
-  grid-row: 2 / 4;
 }
 
 .tape-image {
   grid-column: 1;
-  grid-row: 3 / 5;
+  grid-row: 3 / 6;
 }
 
 .street-image {
+  grid-row: 4/6;
   grid-column: 2/4;
 }
-/* Стилизация изображений галереи */
-.gallery-section__img {
+.content-section__img {
   display: block;
   object-fit: cover;
   inline-size: 100%;
   block-size: 100%;
 }
-/* Стилизация футера */
+
 .footer {
-  min-block-size: 100vh;
+  height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: 1fr;
@@ -225,12 +249,10 @@ main {
   align-items: center;
 }
 
-.footer.decorated-zone::after {
-  top: 20px;
-}
-
-.footer.decorated-zone::before {
-  bottom: 21px;
+.title-decor {
+  color: var(--subtitle-color);
+  font-weight: bold;
+  background: var(--accent-color);
 }
 
 @media (width <= 768px) {
@@ -257,10 +279,6 @@ main {
 
   .header__quote {
     inline-size: 47.5vw;
-  }
-
-  main {
-    inline-size: 95vw;
   }
 
   .first-section {
