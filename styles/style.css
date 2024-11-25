@@ -14,15 +14,11 @@
   position: relative;
   display: grid;
   block-size: 95vh;
-  inline-size: 98vw;
+  inline-size: 96vw;
   grid-template-rows: 1fr auto 1fr;
   margin-block-end: 78px;
 }
 /* Стилизация меню */
-/* .header__theme-menu {
-  padding-block-end: 274px;
-} */
-
 .header__theme-menu-list {
   display: flex;
   justify-content: center;
@@ -68,7 +64,7 @@
 .header__quote {
   justify-self: end;
   align-content: center;
-  inline-size: 49vw;
+  inline-size: 48vw;
 }
 
 .title-decor {
@@ -80,7 +76,7 @@
 .decor-element {
   position: absolute;
   top: 1px;
-  right: 13px;
+  right: 7px;
   display: flex;
   align-items: center;
   color: var(--accent-color);
@@ -101,7 +97,7 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 4px;
+  right: 0;
   border: solid var(--accent-color);
   border-width: 1px 1px 0px 0px;
   inline-size: 25px;
@@ -120,17 +116,8 @@
 }
 
 main {
-  inline-size: 98vw;
+  inline-size: 96vw;
 }
-
-/* Стилизация секций с текстом */
-/* Разметка сеток */
-/* .content-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px 20px;
-  margin-block-end: 76px;
-} */
 /* Стилизация заголовков */
 .section-title {
   color: var(--section-title-color);
@@ -141,18 +128,19 @@ main {
   margin-block-end: 13px;
 }
 /* Размещение ячеек */
-
-.first-section, .third-section {
+.first-section,
+.third-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px 10px;
 }
 
 .first-section {
-  margin-block-end: 83px;
+  margin-block-end: 84px;
 }
 
-.first-section__article, .third-section__article {
+.first-section__article,
+.third-section__article {
   grid-column: 2;
 }
 
@@ -160,7 +148,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px;
-  margin-block-end: 86px;
+  margin-block-end: 85px;
 }
 
 .second-section__article {
@@ -168,7 +156,7 @@ main {
 }
 
 .third-section {
-  margin-block-end: 80px;
+  margin-block-end: 79px;
 }
 
 .third-section__article .section-article__title {
@@ -195,7 +183,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px;
-  margin-block-end: 72px;
+  margin-block-end: 79px;
 }
 
 .gallery-title {
@@ -225,7 +213,6 @@ main {
   display: block;
   object-fit: cover;
   inline-size: 100%;
-  block-size: 100%;
 }
 /* Стилизация футера */
 .footer {
@@ -239,7 +226,8 @@ main {
 
 @media (width <= 768px) {
   .header {
-    margin-block-end: 78px;
+    inline-size: 95vw;
+    margin-block-end: 92px;
   }
 
   .header__theme-menu {
@@ -254,18 +242,21 @@ main {
   }
 
   .header__quote {
-    margin: 162px 0;
     inline-size: 47vw;
   }
 
+  main {
+    inline-size: 95vw;
+  }
+
   .first-section {
-    gap: 25px 40px;
-    margin-block-end: 87px;
+    gap: 26px 17px;
+    margin-block-end: 85px;
   }
 
   .second-section {
     gap: 23px;
-    margin-block-end: 83px;
+    margin-block-end: 84px;
   }
 
   .second-section__article {
@@ -278,8 +269,8 @@ main {
   }
 
   .third-section {
-    gap: 20px 20px;
-    margin-block-end: 84px;
+    gap: 21px 10px;
+    margin-block-end: 80px;
   }
 
   .third-section__article {
@@ -287,12 +278,8 @@ main {
   }
 
   .gallery-section {
-    gap: 18px 21px;
+    gap: 17px 21px;
     margin-block-end: 80px;
-  }
-
-  .header-footer {
-    padding-block: 441px;
   }
 }
 
@@ -302,8 +289,7 @@ main {
   }
 
   .header {
-    grid-template-rows: auto;
-    margin-block-end: 60px;
+    margin-block-end: 62px;
   }
 
   .header__theme-menu-list {
@@ -320,20 +306,28 @@ main {
     inline-size: 100%;
   }
 
-  .content-section {
+  .decor-element {
+    right: 11px;
+  }
+
+  .first-section,
+  .second-section,
+  .third-section,
+  .gallery-section {
     grid-template-columns: 1fr;
-    row-gap: 20px;
   }
 
   .first-section {
-    margin-block-end: 52px;
+    gap: 25px;
+    margin-block-end: 56px;
   }
+
   .first-section__article {
     grid-column: 1;
   }
 
   .second-section {
-    margin-block-end: 50px;
+    margin-block-end: 59px;
   }
 
   .second-section__article {
@@ -341,25 +335,26 @@ main {
   }
 
   .section-article__title {
-    margin-block-end: 16px;
+    margin-block-end: 10px;
   }
 
   .section-article__subtitle {
-    margin-block-end: 15px;
+    margin-block-end: 13px;
   }
 
   .third-section {
-    margin-block-end: 49px;
+    margin-block-end: 51px;
+    gap: 22px;
   }
+
   .third-section__article {
     grid-column: 1;
     padding-inline-start: 0;
   }
 
   .gallery-section {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-block-end: 40px;
+    gap: 8px;
+    margin-block-end: 54px;
   }
 
   .gallery-title {
@@ -391,11 +386,4 @@ main {
     grid-column: 1;
     grid-row: 7;
   }
-
-  .header-footer {
-    padding-block: 275px;
-  }
 }
-
-
-
