@@ -6,7 +6,6 @@
   font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   line-height: 23px;
-  /* background: url(../images/cover-image-dark.png) no-repeat center / cover; */
   background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -101,7 +100,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  border: solid rgb(var(--accent-color));
+  border: solid var(--decor-element-color);
   border-width: 1px 1px 0px 0px;
   inline-size: 25px;
   block-size: 25px;
@@ -112,7 +111,7 @@
   position: absolute;
   bottom: 40px;
   left: 0;
-  border: solid rgb(var(--accent-color));
+  border: solid var(--decor-element-color);
   border-width: 0px 0px 1px 1px;
   inline-size: 25px;
   block-size: 25px;
@@ -325,8 +324,8 @@
     gap: 24px;
     margin-block-end: 56px;
     .main-article {
-      padding-inline-start: 0;
       grid-column: 1;
+      padding-inline-start: 0;
     }
   }
 

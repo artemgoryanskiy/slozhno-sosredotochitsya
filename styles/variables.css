@@ -5,10 +5,11 @@
 :root {
   --accent-color: 255 0 112;
   --menu-item-color: rgb(var(--accent-color));
-  --menu-item-hover: rgb(var(--accent-color) / .4);
+  --menu-item-hover: rgb(var(--accent-color) / 0.4);
   --main-text-color: 241, 178, 206;
   --subtitle-color: rgb(0, 0, 40);
   --title-color: rgb(219, 0, 255);
+  --decor-element-color: rgb(var(--accent-color));
   --section-title-color: rgb(var(--accent-color));
   --link-action-color: rgb(var(--accent-color));
 }

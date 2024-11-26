@@ -4,16 +4,16 @@
   переключая тему
 */
 
-:root.theme_dark {
+:root .theme_dark {
   --accent-color: 255 0 112;
   --menu-item-color: rgb(var(--accent-color));
   --menu-item-hover: rgb(var(--accent-color) / 0.4);
   --main-text-color: 241, 178, 206;
   --subtitle-color: rgb(0, 0, 40);
   --title-color: rgb(219, 0, 255);
+  --decor-element-color: rgb(var(--accent-color));
   --section-title-color: rgb(var(--accent-color));
   --link-action-color: rgb(var(--accent-color));
-  /* background: url(../images/cover-image-dark.png) no-repeat center / cover; */
 }
 
 .page.theme_dark {
@@ -21,24 +21,30 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --accent-color: 255 0 112;
-  --menu-item-color: rgb(var(--accent-color));
-  --menu-item-hover: rgb(var(--accent-color) / 0.4);
-  --main-text-color: 241, 178, 206;
-  --subtitle-color: rgb(0, 0, 40);
-  --title-color: rgb(219, 0, 255);
-  --section-title-color: rgb(var(--accent-color));
-  --link-action-color: rgb(var(--accent-color));
   background: url(../images/cover-image-dark.png) no-repeat center / cover;
+
   .decor-element {
     display: flex;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme_dark {
+  :root {
+    --accent-color: 255 0 112;
+    --menu-item-color: rgb(var(--accent-color));
+    --menu-item-hover: rgb(var(--accent-color) / 0.4);
+    --main-text-color: 241, 178, 206;
+    --subtitle-color: rgb(0, 0, 40);
+    --title-color: rgb(219, 0, 255);
+    --decor-element-color: rgb(var(--accent-color));
+    --section-title-color: rgb(var(--accent-color));
+    --link-action-color: rgb(var(--accent-color));
+  }
+
+  .page {
     background: url(../images/cover-image-dark.png) no-repeat center / cover;
   }
+
   .decor-element {
     display: flex;
   }
