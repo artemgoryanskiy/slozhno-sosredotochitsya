@@ -3,17 +3,33 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {
+  --accent-color: 255 141 203;
+  --main-text-color: 53 52 48;
+  --menu-item-color: rgb(var(--main-text-color));
+  --menu-item-hover: rgb(var(--main-text-color) / 0.4);
+  --title-color: rgb(255, 194, 230);
+  --section-title-color: rgb(var(--main-text-color));
+  --subtitle-color: rgb(var(--main-text-color));
+  --link-action-color: rgb(var(--main-text-color));
+  background: url(../images/cover-image-light.png) no-repeat center / cover;
+  .decor-element {
+    display: none;
+  }
+}
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --accent-color: rgb(255, 141, 203);
-    --main-text-color: rgb(53, 52, 48);
-    --menu-item-color: var(--main-text-color);
+  :root.theme_light {
+    --accent-color: 255 141 203;
+    --main-text-color: 53 52 48;
+    --menu-item-color: rgb(var(--main-text-color));
+    --menu-item-hover: rgb(var(--main-text-color) / 0.4);
     --title-color: rgb(255, 194, 230);
-    --section-title-color: var(--main-text-color);
-    --subtitle-color: var(--main-text-color);
-    --link-action-color: var(--main-text-color);
+    --section-title-color: rgb(var(--main-text-color));
+    --subtitle-color: rgb(var(--main-text-color));
+    --link-action-color: rgb(var(--main-text-color));
     background: url(../images/cover-image-light.png) no-repeat center / cover;
+
     .decor-element {
       display: none;
     }
@@ -25,15 +41,15 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background: url(../images/cover-image-light.png) no-repeat center / cover;
-
-  --accent-color: rgb(255, 141, 203);
-  --main-text-color: rgb(53, 52, 48);
-  --menu-item-color: var(--main-text-color);
+  --accent-color: 255 141 203;
+  --main-text-color: 53 52 48;
+  --menu-item-color: rgb(var(--main-text-color));
+  --menu-item-hover: rgb(var(--main-text-color) / 0.4);
   --title-color: rgb(255, 194, 230);
-  --section-title-color: var(--main-text-color);
-  --subtitle-color: var(--main-text-color);
-  --link-action-color: var(--main-text-color);
+  --section-title-color: rgb(var(--main-text-color));
+  --subtitle-color: rgb(var(--main-text-color));
+  --link-action-color: rgb(var(--main-text-color));
+  background: url(../images/cover-image-light.png) no-repeat center / cover;
 
   .decor-element {
     display: none;

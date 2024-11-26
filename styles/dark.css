@@ -4,36 +4,39 @@
   переключая тему
 */
 
-.page.theme_dark {
-  background: url(../images/cover-image-dark.png) no-repeat center / cover;
+:root.theme_dark {
+  --accent-color: 255 0 112;
+  --menu-item-color: rgb(var(--accent-color));
+  --menu-item-hover: rgb(var(--accent-color) / 0.4);
+  --main-text-color: 241, 178, 206;
+  --subtitle-color: rgb(0, 0, 40);
+  --title-color: rgb(219, 0, 255);
+  --section-title-color: rgb(var(--accent-color));
+  --link-action-color: rgb(var(--accent-color));
+  /* background: url(../images/cover-image-dark.png) no-repeat center / cover; */
+}
 
+.page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --accent-color: rgb(255, 0, 112);
-  /* Цвет элементов меню */
-  --menu-item-color: var(--accent-color);
-  /* Цвет поупрозрачного заголовка в текстовой секции */
-  --accent-color-transparent: rgba(255, 0, 112, 0.4);
-  /* Цвет основного текста */
-  --main-text-color: rgb(241, 178, 206);
-  /* Цвет заголовков-параграфов и цитаты */
+  --accent-color: 255 0 112;
+  --menu-item-color: rgb(var(--accent-color));
+  --menu-item-hover: rgb(var(--accent-color) / 0.4);
+  --main-text-color: 241, 178, 206;
   --subtitle-color: rgb(0, 0, 40);
-  /* Цвет главного заголовка */
   --title-color: rgb(219, 0, 255);
-  /* Цвет заголовков екции с текстом */
-  --section-title-color: var(--accent-color);
-  /* Цвет состояний ссылок */
-  --link-action-color: var(--accent-color);
-
+  --section-title-color: rgb(var(--accent-color));
+  --link-action-color: rgb(var(--accent-color));
+  background: url(../images/cover-image-dark.png) no-repeat center / cover;
   .decor-element {
     display: flex;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root.theme_dark {
     background: url(../images/cover-image-dark.png) no-repeat center / cover;
   }
   .decor-element {
