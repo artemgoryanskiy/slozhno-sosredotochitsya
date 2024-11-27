@@ -21,7 +21,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background: url(../images/cover-image-dark.png) no-repeat center / cover;
+  background: url(../images/cover-image-dark.png) no-repeat center / cover fixed;
 
   .decor-element {
     display: flex;
@@ -42,7 +42,7 @@
   }
 
   .page {
-    background: url(../images/cover-image-dark.png) no-repeat center / cover;
+    background: url(../images/cover-image-dark.png) no-repeat center / cover fixed;
   }
 
   .decor-element {

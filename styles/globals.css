@@ -46,7 +46,6 @@ button {
   text-transform: lowercase;
   background: transparent;
   cursor: pointer;
-  border: 1px solid;
 }
 
 button:focus,
