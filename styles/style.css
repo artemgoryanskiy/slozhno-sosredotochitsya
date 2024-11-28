@@ -237,7 +237,7 @@
   padding-block-end: 38px;
 }
 
-@media (width <= 768px) {
+@media (width < 1024px) {
   .header {
     grid-template-rows: 43% min-content 44%;
     margin-block-end: 40px;
@@ -270,10 +270,11 @@
   }
 }
 
-@media (width <= 375px) {
+@media (width < 768px) {
   .page {
     padding: 10px;
   }
+
   .page-title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
